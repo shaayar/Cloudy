@@ -1,8 +1,109 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "monsteratt", sans-serif;
+}
+
+.app {
+  background-image: url("./assets/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+  min-height: 100vh;
+}
+
+.app.warm {
+  background-image: url("./assets/warm-bg.jpg");
+}
+
+.app.cold {
+  background-image: url("./assets/cold-bg.jpg");
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+}
+
+.search-box {
+  width: 30vw;
+}
+
+.search-box .search-bar {
+  width: 100%;
+  height: 3vw;
+  padding-left: 1.2vw;
+  border-radius: 1vw;
+  border: none;
+  background: none;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.309);
+  border-radius: 12px;
+  border: 0.3vh solid rgba(255, 255, 255, 0.167);
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.2em;
+  transition: 0.4s ease-in-out;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.206);
+  color: black;
+}
+
+.location-box {
+  margin: 2vw;
+  color: #fff;
+}
+
+.location-box .location {
+  font-size: 3em;
+  text-shadow: 1vw 1vw rgba(50, 50, 70, 0.5);
+  font-weight: bold;
+}
+
+.location-box .date {
+  font-size: 1.8em;
+  font-style: italic;
+  margin-top: 1vw;
+}
+
+.weather-box {
+  text-align: center;
+  color: #fff;
+  font-size: 1.4em;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.1vw;
+  font-size: 2.1em;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1vw;
+  padding: 1vw;
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.weather-box .weather {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
